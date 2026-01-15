@@ -19,11 +19,6 @@ const Contact = () => {
       value: 'erik@ingenjorsbyran.com',
       href: 'mailto:erik@ingenjorsbyran.com',
     },
-    {
-      icon: Clock,
-      label: 'Kontorstider',
-      value: 'Mån-Fre: 08:00 - 17:00',
-    },
   ];
 
   return (
@@ -34,11 +29,11 @@ const Contact = () => {
             Kontakt
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-foreground">
-            Låt oss prata om ditt projekt
+            Långsiktiga samarbeten
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Har du frågor eller vill diskutera ett samarbete? 
-            Kontakta oss så återkommer vi inom 24 timmar.
+            Vi arbetar med utvalda kunder i långsiktiga partnerskap. 
+            Har du en fråga eller ett intressant projekt? Hör gärna av dig.
           </p>
         </div>
 
