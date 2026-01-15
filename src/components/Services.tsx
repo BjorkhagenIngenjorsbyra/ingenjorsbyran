@@ -76,10 +76,12 @@ const Services = () => {
                 intuitiv design för smidigare projekthantering.
               </p>
               <a
-                href="#contact"
+                href="https://zemichat.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all hover:gap-3"
               >
-                Läs mer
+                Besök ZemiChat
                 <ArrowRight size={18} />
               </a>
             </div>
