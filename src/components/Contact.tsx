@@ -1,6 +1,8 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const contactInfo = [
     {
       icon: MapPin,
@@ -67,13 +69,13 @@ const Contact = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <a
-              href="mailto:erik@ingenjorsbyran.com"
+            <button
+              onClick={() => navigate('/support')}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
             >
               <Mail size={20} />
               Skicka ett e-postmeddelande
-            </a>
+            </button>
           </div>
         </div>
       </div>
