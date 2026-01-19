@@ -84,6 +84,32 @@ const Services = () => {
             </a>
           </div>
         </div>
+
+        {/* Agent Ecohub Feature */}
+        <div className="mt-6 bg-card rounded-xl shadow-card border border-border p-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                <Code2 size={24} className="text-primary-foreground" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground">Agent Ecohub</h3>
+                <p className="text-muted-foreground">
+                  AI-driven plattform för effektiv projektering och automatisering inom byggindustrin.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://aiprojektering.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-all hover:gap-3 whitespace-nowrap"
+            >
+              Besök Agent Ecohub
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
