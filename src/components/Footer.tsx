@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>© 2026 Björkhagen Ingenjörsbyrå AB. Alla rättigheter förbehållna.</p>
-            <p>Org.nr: 559XXX-XXXX</p>
+            <p>Org.nr: 559534-5801</p>
           </div>
         </div>
       </div>
