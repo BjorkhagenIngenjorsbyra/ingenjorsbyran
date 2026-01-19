@@ -1,11 +1,25 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/logo-horizontal.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    if (location.pathname === '/') {
+      // Already on home page, just scroll to contact
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Navigate to home page, then scroll to contact
+      navigate('/', { state: { scrollToContact: true } });
+    }
+  };
 
   const navLinks = [
     { name: 'Hem', path: '/' },
@@ -36,12 +50,12 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="#contact"
+            <button
+              onClick={handleContactClick}
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
             >
               Kontakt
-            </a>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -70,13 +84,12 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={handleContactClick}
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors w-fit"
               >
                 Kontakt
-              </a>
+              </button>
             </div>
           </nav>
         )}
