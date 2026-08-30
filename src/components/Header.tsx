@@ -1,22 +1,18 @@
-import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
 import logo from '@/assets/logo-horizontal.png';
 
-const sections = [
+const links = [
   { name: 'Bygghandling', id: 'bygghandling' },
-  { name: 'Uppdrag', id: 'uppdrag' },
-  { name: 'Om byrån', id: 'om' },
+  { name: 'Byrån', id: 'byran' },
+  { name: 'Kontakt', id: 'kontakt' },
 ];
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   const goTo = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsMenuOpen(false);
     if (location.pathname === '/') {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -24,58 +20,24 @@ const Header = () => {
     }
   };
 
-  const linkClass = 'text-sm font-medium text-muted-foreground transition-colors hover:text-primary';
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
-            <img src={logo} alt="Björkhagen Ingenjörsbyrå" className="h-10 md:h-12 w-auto" />
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-8">
-            {sections.map((s) => (
-              <a key={s.id} href={`#${s.id}`} onClick={goTo(s.id)} className={linkClass}>
-                {s.name}
-              </a>
-            ))}
+    <header className="w-full">
+      <div className="px-6 md:px-10 py-6 md:py-8 flex items-center justify-between">
+        <Link to="/" aria-label="Björkhagen Ingenjörsbyrå">
+          <img src={logo} alt="Björkhagen Ingenjörsbyrå" className="h-9 md:h-11 w-auto" />
+        </Link>
+        <nav className="flex items-center gap-6 md:gap-10">
+          {links.map((l) => (
             <a
-              href="#kontakt"
-              onClick={goTo('kontakt')}
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              key={l.id}
+              href={`#${l.id}`}
+              onClick={goTo(l.id)}
+              className="text-xs md:text-sm uppercase tracking-[0.15em] text-foreground hover:text-primary transition-colors"
             >
-              Kontakt
+              {l.name}
             </a>
-          </nav>
-
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground"
-            aria-label="Meny"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {sections.map((s) => (
-                <a key={s.id} href={`#${s.id}`} onClick={goTo(s.id)} className={linkClass}>
-                  {s.name}
-                </a>
-              ))}
-              <a
-                href="#kontakt"
-                onClick={goTo('kontakt')}
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors w-fit"
-              >
-                Kontakt
-              </a>
-            </div>
-          </nav>
-        )}
+          ))}
+        </nav>
       </div>
     </header>
   );
