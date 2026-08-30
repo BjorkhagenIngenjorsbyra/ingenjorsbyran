@@ -15,6 +15,7 @@ const Index = () => {
               </span>
             ))}
           </p>
+          <p>&nbsp;</p>
           <p>Arkitektur</p>
         </div>
       </section>
