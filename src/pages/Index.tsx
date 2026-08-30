@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 
-const words = ['AI-driven', 'bygghandlingsprojektering', 'för', 'totalentreprenader.'];
+const words = ['Automatiserad', 'bygghandlingsprojektering', 'för', 'totalentreprenader.'];
 
 const Index = () => {
   return (
