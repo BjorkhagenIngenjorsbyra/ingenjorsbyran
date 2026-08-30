@@ -5,7 +5,7 @@ const words = ['AI-driven', 'bygghandlingsprojektering', 'för', 'totalentrepren
 const Index = () => {
   return (
     <Layout>
-      <section className="px-6 md:px-10 pt-10 md:pt-16">
+      <section className="flex-1 flex items-center px-6 md:px-10 py-10">
         <p className="text-lg md:text-2xl font-light leading-relaxed md:whitespace-nowrap">
           {words.map((w, i) => (
             <span key={w} className="block md:inline">
@@ -16,14 +16,14 @@ const Index = () => {
         </p>
       </section>
 
-      <section id="kontakt" className="mt-auto px-6 md:px-10 pt-16 pb-8">
-        <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] gap-2 md:gap-16">
-          <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Kontakt</p>
-          <p className="text-xs tracking-[0.05em] leading-relaxed">
+      <section id="kontakt" className="px-6 md:px-10 pb-8">
+        <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] gap-2 md:gap-16 text-xs tracking-[0.15em] text-muted-foreground">
+          <p className="uppercase">Kontakt</p>
+          <p className="leading-relaxed">
             <a href="mailto:alva@ingenjorsbyran.com" className="block md:inline hover:text-primary transition-colors">
               alva@ingenjorsbyran.com
             </a>
-            <span className="hidden md:inline text-muted-foreground"> · </span>
+            <span className="hidden md:inline"> · </span>
             <a href="mailto:erik@ingenjorsbyran.com" className="block md:inline hover:text-primary transition-colors">
               erik@ingenjorsbyran.com
             </a>
