@@ -18,7 +18,7 @@ const Header = () => {
     <header className="w-full">
       <div className="px-6 md:px-10 py-6 md:py-8 flex items-center justify-between">
         <Link to="/" aria-label="Björkhagen Ingenjörsbyrå">
-          <img src={logo} alt="Björkhagen Ingenjörsbyrå" className="h-9 md:h-11 w-auto" />
+          <img src={logo} alt="Björkhagen Ingenjörsbyrå" className="h-14 md:h-20 w-auto" />
         </Link>
         <nav>
           <a
