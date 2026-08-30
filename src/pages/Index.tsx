@@ -1,19 +1,22 @@
 import Layout from '@/components/Layout';
 
-const words = ['Automatiserad', 'bygghandlingsprojektering', 'för', 'totalentreprenader.'];
+const words = ['Bygghandlingsprojektering', 'för', 'totalentreprenader.'];
 
 const Index = () => {
   return (
     <Layout>
       <section className="flex-1 flex items-center px-6 md:px-10 py-10">
-        <p className="text-lg md:text-2xl font-light leading-relaxed md:whitespace-nowrap">
-          {words.map((w, i) => (
-            <span key={w} className="block md:inline">
-              {w}
-              {i < words.length - 1 ? ' ' : ''}
-            </span>
-          ))}
-        </p>
+        <div className="text-lg md:text-2xl font-light leading-relaxed">
+          <p className="md:whitespace-nowrap">
+            {words.map((w, i) => (
+              <span key={w} className="block md:inline">
+                {w}
+                {i < words.length - 1 ? ' ' : ''}
+              </span>
+            ))}
+          </p>
+          <p>Arkitektur</p>
+        </div>
       </section>
 
       <section id="kontakt" className="px-6 md:px-10 pb-8">
