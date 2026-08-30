@@ -2,19 +2,20 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
 import Services from '@/components/Services';
+import Projects from '@/components/Projects';
+import About from '@/components/About';
 import Contact from '@/components/Contact';
 
 const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state?.scrollToContact) {
+    const id = location.state?.scrollTo;
+    if (id) {
       setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
-      // Clear the state so it doesn't scroll again on re-renders
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
@@ -22,8 +23,9 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
-      <About />
       <Services />
+      <Projects />
+      <About />
       <Contact />
     </Layout>
   );

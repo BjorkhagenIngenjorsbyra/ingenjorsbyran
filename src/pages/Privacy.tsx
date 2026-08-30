@@ -11,7 +11,7 @@ const Privacy = () => {
               Integritetspolicy
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Senast uppdaterad: Januari 2026
+              Senast uppdaterad: Augusti 2026
             </p>
           </div>
         </div>
@@ -42,8 +42,8 @@ const Privacy = () => {
                   </h3>
                   <p>
                     Denna integritetspolicy beskriver hur Björkhagen Ingenjörsbyrå AB ("vi", "oss" eller "vår") 
-                    samlar in, använder och skyddar din personliga information när du använder våra tjänster 
-                    och applikationer, inklusive ZemiChat.
+                    samlar in, använder och skyddar din personliga information när du använder vår webbplats
+                    och våra tjänster.
                   </p>
                 </div>
 
