@@ -18,7 +18,7 @@ const Contact = () => {
             förslag på omfattning och arvode.
           </p>
 
-          <div className="mt-10 grid sm:grid-cols-3 gap-6">
+          <div className="mt-10 space-y-5">
             {contactInfo.map((item) => (
               <div key={item.label} className="flex items-start gap-4">
                 <div className="w-11 h-11 bg-primary/10 rounded-md flex items-center justify-center flex-shrink-0">
