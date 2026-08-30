@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-3">
             <img src={logo} alt="Björkhagen Ingenjörsbyrå" className="h-10 w-auto" />
             <p className="text-sm text-muted-foreground max-w-sm">
-              A-projektering i Revit, från bygglov till bygghandling.
+              Bygghandlingsprojektering (A) för totalentreprenader.
             </p>
           </div>
 

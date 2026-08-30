@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center hero-gradient overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-center hero-gradient overflow-hidden">
       <div className="container relative z-10 pt-24 pb-28">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-wider text-primary-foreground/80 animate-fade-up">
@@ -12,24 +12,25 @@ const Hero = () => {
             className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight animate-fade-up"
             style={{ animationDelay: '0.05s' }}
           >
-            A-projektering i Revit, från bygglov till bygghandling
+            Bygghandlingsprojektering för totalentreprenader
           </h1>
           <p
             className="mt-6 text-lg md:text-xl text-primary-foreground/90 max-w-2xl animate-fade-up"
             style={{ animationDelay: '0.1s' }}
           >
-            Vi tar fram arkitekthandlingar åt byggentreprenörer, byggherrar och andra konsulter
-            – och bygger själva de verktyg som granskar, exporterar och kontrollerar leveransen.
+            Vi tar fram arkitekthandlingarna (A) i Revit åt totalentreprenören – planer, sektioner,
+            fasader, detaljer, uppställningar och beskrivningar – och levererar PDF, DWG och IFC
+            enligt entreprenörens standard.
           </p>
           <div
             className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up"
             style={{ animationDelay: '0.15s' }}
           >
             <a
-              href="#tjanster"
+              href="#bygghandling"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-background text-primary rounded-md hover:bg-background/90 transition-all hover:gap-3"
             >
-              Det här gör vi
+              Vad som ingår
               <ArrowRight size={18} />
             </a>
             <a

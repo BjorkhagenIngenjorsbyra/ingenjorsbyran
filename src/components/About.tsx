@@ -1,16 +1,16 @@
 const About = () => {
-  const principles = [
+  const facts = [
     {
-      title: 'En person, hela handlingen',
-      text: 'Samma person modellerar, granskar och levererar. Frågor får svar av den som ritat.',
+      title: 'En person i uppdraget',
+      text: 'Samma person modellerar, granskar och levererar. Frågor besvaras av den som ritat.',
     },
     {
-      title: 'Egenkontroll på varje leverans',
-      text: 'Varje avsteg och varje val dokumenteras med krav, val och skäl – så att granskningen kan börja i sak.',
+      title: 'Egenkontroll per leverans',
+      text: 'Varje avsteg från förfrågningsunderlaget står i egenkontrollen med krav, val och skäl.',
     },
     {
-      title: 'Verktyg i egen regi',
-      text: 'Export, kontroll av koordinater, axlar och littera och sammanställning av leveranspaketet är automatiserat, och körs om efter sista ändringen.',
+      title: 'Egna verktyg',
+      text: 'Export, kontroll av koordinater, axlar och littera och sammanställning av leveranspaketet är automatiserat och körs om efter sista modelländringen.',
     },
   ];
 
@@ -24,21 +24,20 @@ const About = () => {
               Björkhagen Ingenjörsbyrå
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Byrån startades 2025 av Erik Holmgren och drivs från Helsingborg. Uppdragen kommer från
-              byggentreprenörer, byggherrar och andra konsulter, främst i Skåne och Blekinge, och handlar om
-              arkitektdelen i bygglov och bygghandling.
+              Byrån startades 2025 av Erik Holmgren och drivs från Helsingborg. Uppdragen är
+              bygghandlingsprojektering för arkitektdelen i totalentreprenader, i Skåne och Blekinge.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Modellerna byggs i Revit. Verktygen som granskar och exporterar dem utvecklas i egen regi och
-              används i varje uppdrag.
+              Modellerna byggs i Revit. Verktygen som granskar och exporterar dem är utvecklade av byrån
+              och används i varje uppdrag.
             </p>
           </div>
 
           <div className="space-y-4">
-            {principles.map((p) => (
-              <div key={p.title} className="bg-card rounded-lg border border-border p-6">
-                <h3 className="font-semibold text-foreground">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.text}</p>
+            {facts.map((f) => (
+              <div key={f.title} className="bg-card rounded-lg border border-border p-6">
+                <h3 className="font-semibold text-foreground">{f.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.text}</p>
               </div>
             ))}
           </div>

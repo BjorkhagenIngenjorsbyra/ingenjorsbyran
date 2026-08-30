@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '@/assets/logo-horizontal.png';
 
 const sections = [
-  { name: 'Tjänster', id: 'tjanster' },
+  { name: 'Bygghandling', id: 'bygghandling' },
   { name: 'Uppdrag', id: 'uppdrag' },
   { name: 'Om byrån', id: 'om' },
 ];
